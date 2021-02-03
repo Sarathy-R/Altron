@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
-
-
-
+/**COLOR SHADES**/
+$accent-text-shade:rgb(1, 160, 249);
+$btn-bg:linear-gradient(115deg, rgb(1, 160, 249) 0%, rgb(9, 199, 120) 100%);
+$cards-box:0px 0px 20px 20px rgba(158,158,158,0.16);
 /** EXTENSIONS **/
 %grids{
     display: grid;
@@ -12,12 +13,14 @@
 
 /*GENERAL STYLES*/
 body{
+    margin:0;
     font-family: 'Montserrat', sans-serif;
     box-sizing: border-box;
 }
 nav {
     li{
-        list-style-type: none;
+        list-style-type: none;        
+        margin-right: 35px;
     }
 }
 
@@ -37,15 +40,55 @@ nav {
     margin:0 auto;
     width: 100%;
 }
+@media  (max-width:500px){
+    .container{
+        padding:0px 10px;
+    }   
+}
 section{
     padding:30px 0px;
 }
 /**HEADER STYLES **/
+.header-section{
+    z-index: 1;
+    padding: 30px 0px;
+    box-shadow: -1px 5px 18px -4px rgba(0,0,0,0.5);
+    position: sticky;
+    top:0;
+    background-color: white;
+}
 .navbar{
-    justify-content: space-evenly;
+    justify-content: space-between;
+    max-width: 1100px;
+    padding:0px 40px;
+    overflow: hidden;
+    h3{
+        margin:0;
+    }
 }
 
 /***HOME SCREEN STYLES***/
+.home-section div:first-child() {
+    h1{
+        font-size: 45px;
+        color:$accent-text-shade;
+        font-weight: bolder;
+    }
+    h4{font-size: 23px;}
+    button{
+        background: $btn-bg;
+        border: none;
+        padding: 13px 30px;
+        font-size: 20px;
+        color: white;
+        border-radius: 5px;
+        transition: transform 0.2s ease;
+    }
+    button:hover{
+        cursor: pointer;
+        transform: scale(0.96);
+    }
+}
 .grid-2{
     @extend %grids;
     grid-gap: 50px;
@@ -58,18 +101,34 @@ section{
 }
 /** FEATURE SECTION STYLES **/
 .features{
+    padding-top: 20px ;
+    padding-bottom: 20px ;
+    align-items: flex-start !important;
     span{
         font-size: 35px;
     }
 }
 .card{
     width: 250px;
+    box-shadow: $cards-box;
+    border-radius: 5px;
+    padding: 35px 10px;
     justify-content: center;
-    padding:0px 15px;
     flex-direction: column;
     align-items: center;
     text-align: justify;
-    margin: 10px 0px;
+    margin: 20px 0px;
+    transition: 0.5s ease-in;
+}
+.card:hover{
+    background: $btn-bg;
+    cursor: pointer;
+    transform:translateY(-5%) ;
+    box-shadow: none;
+
+    p,h4{
+        color: white;
+    }
 }
 .cards-section{
     flex-direction: column;
@@ -87,6 +146,7 @@ section{
 .rp{
    align-self: flex-end;
 }
+
 .card{
     img{
         height: 65px;
@@ -96,8 +156,10 @@ section{
         margin: 0;
     }
     p{        
-    padding: 0px 20px;
-    text-align: center;
+        font-size: 13px;
+        padding: 0px 20px;
+        text-align: center;
+        width: 65%;
     }
 }
 @media  (max-width:736px){
@@ -124,17 +186,15 @@ section{
 .project-list{
     justify-content: space-between;
 }
-.project-list{
-    .count-cards{
-        width: 250px;
-        justify-content: center;
-        align-items: center;
-        display: flex;
-        flex-direction: column;
+.project-list > div{
+    width: 250px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
 
-        h1{
-            margin: 0;
-        }
+    h1{
+        margin: 0;
     }
 }
 .service-cards{
@@ -171,7 +231,7 @@ section{
         justify-content: center;
         align-items: center;
     }
-    .count-cards{
+    .project-list > div{
         margin:10px 0px;
     }
 }
@@ -230,7 +290,7 @@ section{
         max-width: 100%;
         max-height: 100%;
         width: 90%;
-        animation:30s tranship linear infinite ;    
+        animation:15s tranship linear infinite ;    
     }
 }
 @keyframes tranship{
@@ -251,7 +311,15 @@ section{
     }
     ul{
         padding:0;
+        margin: 0;
     }
+}
+.footer div:first-child() {
+    justify-content: space-between;    
+}
+
+.address-section{
+    h3{margin:7px 0px;}
 }
 @media (max-width:768px){
     .footer {
@@ -259,4 +327,10 @@ section{
             flex-wrap: wrap;
         }
     }
+}
+/**FOOTER TAG STYLES**/
+footer {
+    background-color: lightgray;
+    text-align: center;
+    margin:0;
 }

@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+/**COLOR SHADES**/
 /** EXTENSIONS **/
 .grid-2 {
   display: -ms-grid;
@@ -14,6 +15,7 @@
 
 /*GENERAL STYLES*/
 body {
+  margin: 0;
   font-family: 'Montserrat', sans-serif;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -21,6 +23,7 @@ body {
 
 nav li {
   list-style-type: none;
+  margin-right: 35px;
 }
 
 .flex {
@@ -49,18 +52,71 @@ nav li {
   width: 100%;
 }
 
+@media (max-width: 500px) {
+  .container {
+    padding: 0px 10px;
+  }
+}
+
 section {
   padding: 30px 0px;
 }
 
 /**HEADER STYLES **/
+.header-section {
+  z-index: 1;
+  padding: 30px 0px;
+  -webkit-box-shadow: -1px 5px 18px -4px rgba(0, 0, 0, 0.5);
+          box-shadow: -1px 5px 18px -4px rgba(0, 0, 0, 0.5);
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background-color: white;
+}
+
 .navbar {
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  max-width: 1100px;
+  padding: 0px 40px;
+  overflow: hidden;
+}
+
+.navbar h3 {
+  margin: 0;
 }
 
 /***HOME SCREEN STYLES***/
+.home-section div:first-child h1 {
+  font-size: 45px;
+  color: #01a0f9;
+  font-weight: bolder;
+}
+
+.home-section div:first-child h4 {
+  font-size: 23px;
+}
+
+.home-section div:first-child button {
+  background: linear-gradient(115deg, #01a0f9 0%, #09c778 100%);
+  border: none;
+  padding: 13px 30px;
+  font-size: 20px;
+  color: white;
+  border-radius: 5px;
+  -webkit-transition: -webkit-transform 0.2s ease;
+  transition: -webkit-transform 0.2s ease;
+  transition: transform 0.2s ease;
+  transition: transform 0.2s ease, -webkit-transform 0.2s ease;
+}
+
+.home-section div:first-child button:hover {
+  cursor: pointer;
+  -webkit-transform: scale(0.96);
+          transform: scale(0.96);
+}
+
 .grid-2 {
   grid-gap: 50px;
   -ms-grid-columns: 1fr 1fr;
@@ -73,16 +129,27 @@ section {
 }
 
 /** FEATURE SECTION STYLES **/
+.features {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  -webkit-box-align: start !important;
+      -ms-flex-align: start !important;
+          align-items: flex-start !important;
+}
+
 .features span {
   font-size: 35px;
 }
 
 .card {
   width: 250px;
+  -webkit-box-shadow: 0px 0px 20px 20px rgba(158, 158, 158, 0.16);
+          box-shadow: 0px 0px 20px 20px rgba(158, 158, 158, 0.16);
+  border-radius: 5px;
+  padding: 35px 10px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 0px 15px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -91,7 +158,22 @@ section {
       -ms-flex-align: center;
           align-items: center;
   text-align: justify;
-  margin: 10px 0px;
+  margin: 20px 0px;
+  -webkit-transition: 0.5s ease-in;
+  transition: 0.5s ease-in;
+}
+
+.card:hover {
+  background: linear-gradient(115deg, #01a0f9 0%, #09c778 100%);
+  cursor: pointer;
+  -webkit-transform: translateY(-5%);
+          transform: translateY(-5%);
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.card:hover p, .card:hover h4 {
+  color: white;
 }
 
 .cards-section {
@@ -130,8 +212,10 @@ section {
 }
 
 .card p {
+  font-size: 13px;
   padding: 0px 20px;
   text-align: center;
+  width: 65%;
 }
 
 @media (max-width: 736px) {
@@ -163,7 +247,7 @@ section {
           justify-content: space-between;
 }
 
-.project-list .count-cards {
+.project-list > div {
   width: 250px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -180,7 +264,7 @@ section {
           flex-direction: column;
 }
 
-.project-list .count-cards h1 {
+.project-list > div h1 {
   margin: 0;
 }
 
@@ -236,7 +320,7 @@ section {
         -ms-flex-align: center;
             align-items: center;
   }
-  .count-cards {
+  .project-list > div {
     margin: 10px 0px;
   }
 }
@@ -317,8 +401,8 @@ section {
   max-width: 100%;
   max-height: 100%;
   width: 90%;
-  -webkit-animation: 30s tranship linear infinite;
-          animation: 30s tranship linear infinite;
+  -webkit-animation: 15s tranship linear infinite;
+          animation: 15s tranship linear infinite;
 }
 
 @-webkit-keyframes tranship {
@@ -358,6 +442,17 @@ section {
 
 .footer ul {
   padding: 0;
+  margin: 0;
+}
+
+.footer div:first-child {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.address-section h3 {
+  margin: 7px 0px;
 }
 
 @media (max-width: 768px) {
@@ -365,5 +460,12 @@ section {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
+}
+
+/**FOOTER TAG STYLES**/
+footer {
+  background-color: lightgray;
+  text-align: center;
+  margin: 0;
 }
 /*# sourceMappingURL=style.css.map */
