@@ -1,208 +1,224 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Altron | AI Everywhere</title>
-    <link rel="stylesheet" href="./sass/style.css">
-</head>
-<!-- START OF HEADER SECTION -->
-<section class="header-section" >    
-    <nav class="navbar flex"> 
-        <h3>ALtron</h3>       
-            <div class="flex">
-            <li>Home</li>
-            <li>Features</li>
-            <li>Services</li>
-            <li>WorkFlow</li>
-            <li>Customers</li>
-            <li>About Us</li>
-            </div>        
-    </nav>
-</section>
-<!-- END OF HEADER SECTION -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./sass/style.css" />
 
-<!-- START OF HOME SCREEN SECTION  -->
-<section>
-    <div class="home-section container grid-2">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  </head>
+  <body>
+    <!-- START OF HEADER SECTION -->
+    <section class="header-section">
+      <nav class="navbar flex">
+        <h3><a href="#home_id">ALtron</a></h3>
+        <div class="flex">
+          <li><a href="#home_id">Home</a></li>
+          <li><a href="#feature_id">Features</a></li>
+          <li><a href="#project_id">Projects</a></li>
+          <!-- <li><a href="#workflow_id">Workflow</a></li> -->
+          <li><a href="#services_id">Services</a></li>
+          <li><a href="#customer_id">Clients</a></li>
+          <li><a href="#about_us">About Us</a></li>
+        </div>
+      </nav>
+    </section>
+    <!-- END OF HEADER SECTION -->
+
+    <!-- START OF HOME SCREEN SECTION  -->
+    <section id="home_id">
+      <div class="home-section container grid-2">
         <div>
-            <h4>Welcome to Altron</h4>
-            <h1> AI & Machine Learning - Products Creators <br>Innovation Hub </h1>
-            <button>Learn More</button>
+          <h4 class="tracking-in-contract">Welcome to Altron</h4>
+          <h1>
+            AI & Machine Learning - Products Creators <br />Innovation Hub
+          </h1>
+          <button>Learn More</button>
         </div>
         <div>
-            <img class='div-images' src="./assets/ai_brain.png" alt="brain">
+          <img class="div-images" src="./assets/ai_brain.png" alt="brain" />
         </div>
-    </div>
-</section>
-<!-- END OF HOME SCREEN SECTION  -->
+      </div>
+    </section>
+    <!-- END OF HOME SCREEN SECTION  -->
 
-<!-- START OF FEATURES SECTION -->
-<section>
-    <div class=" features container grid-2">
+    <!-- START OF FEATURES SECTION -->
+    <section id="feature_id">
+      <div class="features container grid-2">
         <div class="feature-section flex">
-            <div>
+          <div>
             <span>FEATURES</span>
             <h1>Power Your Creativity With Artificial Intelligence</h1>
             <p>We provide various unique solutions to your problem</p>
-            <div class="flex"><ul>
+            <div class="flex">
+              <ul>
                 <li>Machine Learning</li>
                 <li>Deep Learning</li>
                 <li>Artificial Intelligence</li>
-                
-            </ul>
-            <ul>
+
                 <li>Conversational AI Bot</li>
                 <li>Convolution Neural Network</li>
                 <li>Natural language processing</li>
-            </ul>
-        </div>
-        </div>
+              </ul>
+            </div>
+          </div>
         </div>
         <div class="cards-section flex">
-            <div class=" card flex rp">
-                <img src="./assets/machine-learning.svg" alt="">
-                <h4>Advanced Programming</h4>
-                <p>Find out what’s working and what’s not Dig your data to find</p>
-            </div>
-            <div class="card flex">
-                <img src="/assets/automation.svg" alt="">
-                <h4>Cloud AI intergration</h4>
-                <p>Find out what’s working and what’s not Dig your data to find</p>
-            </div>
-            <div class="card flex rp">
-                <img src="/assets/chip.svg" alt="">
-                <h4>AI Chippest</h4>
-                <p>Find out what’s working and what’s not Dig your data to find</p>
-            </div>
-            <div class="card flex">
-                <img src="/assets/arm.png" alt="">
+          <div class="card flex rp" data-aos="fade-left">
+            <img src="./assets/machine-learning.svg" alt="" />
+            <h4>Advanced Programming</h4>
+            <p>Find out what’s working and what’s not Dig your data to find</p>
+          </div>
+          <div class="card flex">
+            <img src="/assets/automation.svg" alt="" />
+            <h4>Cloud AI intergration</h4>
+            <p>Find out what’s working and what’s not Dig your data to find</p>
+          </div>
+          <div class="card flex rp">
+            <img src="/assets/chip.svg" alt="" />
+            <h4>AI Chippest</h4>
+            <p>Find out what’s working and what’s not Dig your data to find</p>
+          </div>
+          <!-- <div class="card flex">
+                <img src="/assets/arm.png" alt="" />
                 <h4>Robotic Arm</h4>
                 <p>Find out what’s working and what’s not Dig your data to find</p>
-            </div>
+              </div> -->
         </div>
-       
-
-    </div>
-</section>
-<!-- END OF FEATURES SECTION -->
-<!-- START OF PROJECT SECTION -->
-<section>
-    <div class="project-list container flex">
-        <div ><h1>1500+</h1><p>Completed Projects</p></div>
-        <div><h1>1475+</h1><p>Satisfied Clients</p></div>
-        <div><h1>550+</h1><p>Experts</p></div>
-        <div><h1>250+</h1><p>Explored Domains</p></div>
-    </div>
-</section>
-<!-- END OF PROJECT SECTION -->
-<!-- START OF WORKFLOW SECTION  -->
-<section class="container">
-    <div class="workflow grid-2">
+      </div>
+    </section>
+    <!-- END OF FEATURES SECTION -->
+    <!-- START OF PROJECT SECTION -->
+    <section id="project_id">
+      <div class="project-list container flex">
         <div>
-            <h1>We develop the Most Advanced Artificial Intelligence</h1>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam ad aliquam temporibus blanditiis amet. Vel sunt minus fuga sint accusamus quidem provident accusantium dolorum quos voluptatem. Pariatur eos aspernatur molestias porro totam rem atque dignissimos.</p>
+          <h1>1500+</h1>
+          <p>Completed Projects</p>
         </div>
         <div>
-            <img class='div-images' src="./assets/illustration-2.png" alt="">
+          <h1>1475+</h1>
+          <p>Satisfied Clients</p>
         </div>
-    </div>    
-    
-</section>
-<!-- END OF WORKFLOW SECTION  -->
-<!-- START OF SERVICES SECTION -->
-<section>
-    <div class="services-list flex">
+        <div>
+          <h1>550+</h1>
+          <p>Experts</p>
+        </div>
+        <div>
+          <h1>250+</h1>
+          <p>Explored Domains</p>
+        </div>
+      </div>
+    </section>
+    <!-- END OF PROJECT SECTION -->
+    <!-- START OF WORKFLOW SECTION  -->
+    <section id="workflow_id" class="container">
+      <div class="workflow grid-2">
+        <div>
+          <h1>We develop the Most Advanced Artificial Intelligence</h1>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam
+            ad aliquam temporibus blanditiis amet. Vel sunt minus fuga sint
+            accusamus quidem provident accusantium dolorum quos voluptatem.
+            Pariatur eos aspernatur molestias porro totam rem atque dignissimos.
+          </p>
+        </div>
+        <div>
+          <img class="div-images" src="./assets/illustration-2.png" alt="" />
+        </div>
+      </div>
+    </section>
+    <!-- END OF WORKFLOW SECTION  -->
+    <!-- START OF SERVICES SECTION -->
+    <section id="services_id">
+      <div class="services-list flex">
         <div class="service-cards flex">
-            <img src="./assets/machine-learning.svg" alt="">
-            <h4>Personal Assistants</h4>
+          <img src="./assets/machine-learning.svg" alt="" />
+          <h4>Personal Assistants</h4>
         </div>
         <div class="service-cards flex">
-            <img src="./assets/automation.svg" alt="">
-            <h4>Video Survillence</h4>
-        </div>
-      
-        <div class="service-cards flex">
-            <img src="./assets/social-media.svg" alt="">
-            <h4>Social Media Services</h4>
-        </div>
-    </div>
-    <div class="services-list  flex">
-        <div class="service-cards flex">
-            <img src="./assets/support.svg" alt="">
-            <h4>Customer Support</h4>
-        </div>
-        <div class="service-cards flex">
-            <img src="./assets/web-search-engine.svg" alt="">
-            <h4>Search Engine</h4>
-        </div>
-        <div class="service-cards flex">
-            <img src="./assets/leakage.svg" alt="">
-            <h4>Online fraud detecion</h4>
+          <img src="./assets/automation.svg" alt="" />
+          <h4>Video Survillence</h4>
         </div>
 
-    </div>
-</section>
+        <div class="service-cards flex">
+          <img src="./assets/social-media.svg" alt="" />
+          <h4>Social Media Services</h4>
+        </div>
+      </div>
+      <div class="services-list flex">
+        <div class="service-cards flex">
+          <img src="./assets/support.svg" alt="" />
+          <h4>Customer Support</h4>
+        </div>
+        <div class="service-cards flex">
+          <img src="./assets/web-search-engine.svg" alt="" />
+          <h4>Search Engine</h4>
+        </div>
+        <div class="service-cards flex">
+          <img src="./assets/leakage.svg" alt="" />
+          <h4>Online fraud detecion</h4>
+        </div>
+      </div>
+    </section>
     <!-- END OF SERVICES SECTION -->
 
     <!-- START OF CLIENT DISPLAY SECTION -->
-    <section class="">
-     <div class="customer-section">
+    <section id="customer_id">
+      <div class="customer-section">
         <h1>Our Clients</h1>
-        <div class="customer-display ">
-            <img src="./assets/clients.png" alt="">
-            <img src="./assets/clients.png" alt="">
+        <div class="customer-display">
+          <img src="./assets/clients.png" alt="" />
+          <img src="./assets/clients.png" alt="" />
         </div>
-    </div>
+      </div>
     </section>
-        <!-- END OF CLIENT DISPLAY SECTION -->
+    <!-- END OF CLIENT DISPLAY SECTION -->
 
-        <!-- START OF FOOTER SECTION  -->
-        <section>
-            <div class="footer container flex">
-                <div class="flex">                    
-                    <ul>
-                        <li>HOME</li>
-                        <li>FEATURES</li>
-                        <li>SERVICES</li>
-                        <li>WORKFLOW</li>
-                        <li>CUSTOMERS</li>
-                        <li>ABOUT US</li>
-                    </ul>
+    <!-- START OF FOOTER SECTION  -->
+    <section id="about_us">
+      <div class="footer container flex">
+        <div class="flex">
+          <ul>
+            <li>HOME</li>
+            <li>FEATURES</li>
+            <li>SERVICES</li>
+            <li>WORKFLOW</li>
+            <li>CLIENTS</li>
+            <li>ABOUT US</li>
+          </ul>
 
-                    <div class="address-section">
-                        <h3>CONTACT US</h3>
-                        <h4>INDIA</h4>
-                        <p> Altron, #32, 8th Cross Street,
-                        Ram Nagar South, Madipakkam, Chennai - 600091
-                        </p>
+          <div class="address-section">
+            <h3>CONTACT US</h3>
+            <h4>INDIA</h4>
+            <p>
+              Altron, #32, 8th Cross Street, Ram Nagar South, Madipakkam,
+              Chennai - 600091
+            </p>
 
-                        <h4>SINGAPORE</h4>
-                        <p> Altron, 30 Cecil Street,
-                        #19-08 Prudential Tower, Singapore (049712).
-                        </p>
+            <h4>SINGAPORE</h4>
+            <p>
+              Altron, 30 Cecil Street, #19-08 Prudential Tower, Singapore
+              (049712).
+            </p>
 
-                        <h4>USA</h4>
-                        <p> Altron, 2035 Sunset Lake Road,
-                        Suit B-2, Newark, Delaware - 19702
-                        </p>
-                    </div>
-                    <div class="contact-section">
-                    <h4> MAIL US</h4>
-                    <p> contact@altron.com</p>
-                    <h4> CAREERS </h4>
-                    <p> careers@altron.com</p>
-
-                    </div>
-                </div>
-            </div>
-        </section>        
-        <!-- END OF FOOTER SECTION  -->
-        <footer>
-            Altron © Copyright 2021 |All Rights Reserved.
-        </footer>
-<body>
-    
-</body>
+            <h4>USA</h4>
+            <p>
+              Altron, 2035 Sunset Lake Road, Suit B-2, Newark, Delaware - 19702
+            </p>
+          </div>
+          <div class="contact-section">
+            <h4>MAIL US</h4>
+            <p>contact@altron.com</p>
+            <h4>CAREERS</h4>
+            <p>careers@altron.com</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- END OF FOOTER SECTION  -->
+    <footer>Altron © Copyright 2021 |All Rights Reserved.</footer>
+  </body>
 </html>
 <script src="app.js"></script>
